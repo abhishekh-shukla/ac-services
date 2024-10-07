@@ -5,6 +5,7 @@
     import ImageCarousel from './Component/Image Carousel/ImageCarousel';
     import Cards from './Component/Cards/Cards';
 import WhyChooseUs from './Component/WhyChooseUs/WhyChooseUs';
+import WebsiteDescription from './Component/Description/WebsiteDescription';
 
     function App() {
     
@@ -109,6 +110,12 @@ import WhyChooseUs from './Component/WhyChooseUs/WhyChooseUs';
         <div className="services-provide">
           <WhyChooseUs/>
         </div>
+        <div className='why-choose-us'>
+          <h1 className='tag'> About Ac Service Centre in (Mumbai)</h1>
+        </div>
+        <div className='website-description'>
+          <WebsiteDescription/>
+          </div>
           <footer>
             <div className="call-now">  
               <button>Call Now</button>
