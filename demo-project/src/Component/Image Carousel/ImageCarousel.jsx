@@ -32,7 +32,7 @@ import 'swiper/css/pagination';
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="carousel-image"  // Add a class for styling images
+              className="carousel-image"  // Add a class for styling images.
             />
           </SwiperSlide>
         ))}
