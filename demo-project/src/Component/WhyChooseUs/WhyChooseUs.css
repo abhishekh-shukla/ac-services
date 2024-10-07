@@ -1,0 +1,97 @@
+    /* Main service section container */
+    .service-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        background-color: #f9f9f9;
+    }
+    
+    /* Container for the image */
+    .service-image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .service-image {
+        width: 100%;
+        max-width: 540px; /* Adjust the max-width for large screens */
+        height: auto;
+    }
+    
+    /* Service details section on the right */
+    .service-details {
+        flex: 1.5;
+        padding-left: 50px;
+    }
+    
+    /* Individual service item */
+    .service-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 10%;
+    }
+    
+    .icon {
+        width: 70px;
+        height: 70px;
+        margin-right: 25px;
+    }
+    
+    .icon img {
+        width: 80px;
+        height: auto;
+    }
+    .icon2 .img1 {
+        width: 110px;
+        height: auto;
+    }
+    
+    /* Service title */
+    .service-title {
+        font-size: 24px;
+        color: #2CD1AD; /* Green color for titles */
+        margin-bottom: 10px;
+    }
+    
+    /* Service item text content */
+    .text-content {
+        flex: 1;
+        text-align: start;
+        font-family: "Roboto", Sans-serif;
+        font-size: larger;
+    }
+    
+    /* Responsive layout for smaller screens */
+    @media (max-width: 1024px) {
+        .service-section {
+        flex-direction: column;
+        text-align: center;
+        }
+    
+        .service-image-container {
+        margin-bottom: 30px;
+        }
+    
+        .service-details {
+        padding-left: 0;
+        }
+    
+        .service-item {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        }
+    
+        .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+        }
+    
+        .service-title {
+        margin-top: 10px;
+        }
+    }
+    

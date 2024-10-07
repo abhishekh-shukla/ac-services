@@ -1,0 +1,258 @@
+      Reset default margins and paddings
+      body {
+        font-family: "Roboto", Sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Main container */
+      .container {
+        text-align: center;
+        background-color: #2CD1AD;
+        font-family: "Roboto", Sans-serif;
+      }
+
+      /* Header section for logo and contact details */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        font-family: "Roboto", Sans-serif;
+      }
+
+      .heading {
+        color: white;
+        font-size: medium;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .contact {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+      .form-heading{
+        font-size: xx-large;
+      }
+
+      /* Main section background */
+      /* .main-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2CD1AD; /* Matching background color from the original design */
+        /* padding: 40px; */
+      /* /  flex-wrap: wrap; Makes the layout responsive */
+      /* } */
+
+      /* .secondary-container {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between; */
+        /* flex-wrap: wrap; Allows form and image to stack on smaller screens */
+        /* width: 100%;
+        padding: 3%; */
+      /* } */ */
+
+      .main-section {
+      background-color:#2CD1AD;
+      display: flex;
+      justify-content: center; /* Centers child elements horizontally */
+      align-items: center; /* Centers child elements vertically */
+      padding: 40px; /* Uncomment if needed for spacing */
+      flex-wrap: wrap; /* Makes the layout responsive */
+      flex-direction: column; /* Stack items vertically */
+      font-family: "Roboto", Sans-serif;
+    }
+
+    .secondary-container {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between; /* Space items within the container */
+      flex-wrap: wrap; /* Allows form and image to stack on smaller screens */
+      width: 80%; /* Adjust width as needed for centering */
+      margin: auto; /* Center container horizontally */
+      padding: 0%;
+    }
+
+
+      /* Form section */
+      .enquiry-form {       
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        width: 100%; /* Adjust to make it responsive */
+        margin-right: 20px; /* Space between form and image */
+      }
+
+      .enquiry-form input,
+      .enquiry-form textarea {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px 5px 5px 5px;
+        border-width: 2px 2px 2px 2px;
+
+      }
+
+      .enquiry-form textarea {
+        resize: none;
+        height: 100px;
+      }
+
+      .enquiry-form button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .enquiry-form button:hover {
+        background-color: #555;
+      }
+
+      /* Image section */
+      .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0% 0% 10%;
+      }
+
+      .repairman-image {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* Footer styling */
+      footer {
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Call now button for floating action */
+      .call-now {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+      }
+
+      .call-now button {
+        background-color: #27ae60;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      .call-now button:hover {
+        background-color: #2ecc71;
+      }
+
+      /* Responsive media queries */
+      @media screen and (max-width: 768px) {
+        .main-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .enquiry-form {
+          margin-bottom: 20px;
+          max-width: 100%;
+        }
+
+        .repairman-image {
+          max-width: 100%;
+        }
+
+        .contact {
+          font-size: 16px;
+        }
+      }
+      .service-container {
+        background-color: #f2f2f2; /* Light grey background */
+        padding: 0px 10%;
+        max-width: max-content; /* Maximum width of the container */
+        margin: 0 auto; /* Center the container */
+        /* border-radius: 8px; Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        font-family: "Roboto", Sans-serif;
+      }
+
+      .header2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header h1 {
+        font-size: 20px; /* Adjust font size as needed */
+        margin: 0;
+        font-size: 39px;
+        font-weight: 600;
+        color: #2CD1AD;
+      }
+      li{
+        border: 0;
+        font-size: 100%;
+        font-style: inherit;
+        font-weight: inherit;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      .call-now {
+        background-color: #333; /* Dark background for button */
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        padding: 10px 15px; /* Padding for button */
+        cursor: pointer; /* Pointer cursor */
+      }
+
+      .service-list {
+        list-style-type: disc; /* Bullet points */
+        padding-left: 20px; /* Indentation for bullet points */
+        margin-top: 40px; /* Space above the list */
+        margin: 18px -19px -16px 0px;
+        padding: 2px 10px 79px 7px;
+        display: inline-grid;
+        gap: 15%;
+        font-size: larger;
+        font-weight: 400;
+      }
+      .our-services{
+        background-color: white;
+        padding: 1%;
+      }
+      .services-heading {
+        font-size: 36px;
+      color: #2CD1AD; /* Match your primary color */
+      margin-bottom: 40px;
+      }
+      .tag{
+        font-family: "Roboto", Sans-serif;
+        font-size: 50px;
+      color: #efefef; /* Match your primary color */
+      margin-bottom: 40px;
+      padding: 1%;
+      font-style: inherit;
+      }
