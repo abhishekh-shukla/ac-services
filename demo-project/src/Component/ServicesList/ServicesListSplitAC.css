@@ -1,0 +1,97 @@
+/* Main service list section */
+.service-list-section {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #EAEAEA;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Heading style */
+  .service-heading {
+    font-size: 24px;
+    color: #00a573; /* Green color to match the screenshot */
+    font-weight: bold;
+    margin-bottom: 4%;
+    text-align: left;
+  }
+  
+  /* Call now button section */
+  .call-now-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+  }
+  
+  .call-now-icon {
+    background-color: #2cd1ad;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .call-now-icon img {
+    width: 30px;
+    height: auto;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Service columns section */
+  .service-columns {
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    gap: 40px;
+    font-weight: 500;
+  }
+  
+  /* Individual column styles */
+  .service-column {
+    display: grid;
+    align-items: start;
+    justify-items: flex-start;
+  }
+  
+  .service-column li {
+    list-style-type: disc;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .service-list-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .call-now-button {
+      margin-bottom: 20px;
+    }
+  
+    .service-columns {
+      flex-direction: column;
+    }
+  }
+  
