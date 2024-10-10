@@ -1,98 +1,145 @@
 /* Main container for the Contact Us section */
 .contact-us-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background: linear-gradient(to bottom right, #2cd1ad, #ffffff);
-    padding: 50px;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .contact-form button span {
-    margin-left: 110px;
-  }
-  
-  .contact-form button:hover {
-    background-color: #555;
-  }
-  
-  /* Contact Info Styling */
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to bottom right, #2cd1ad, #ffffff);
+  padding: 50px;
+  position: relative;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:25%;
+}
+
+.contact-form button span {
+  margin-left: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+/* Contact Info Styling */
+.contact-info {   
+  width: 40%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 75%;
+  gap: 7%;
+  color: #333;
+  position: absolute;
+  left: 61%;
+
 }
 
 .contact-info h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-  .info-item img {
-    width: 24px;
-    margin-right: 10px;
+.info-item img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.info-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #27ae60;
+  padding: 15px;
+  border-radius: 50%;
+  position: fixed;
+}
+
+.floating-call-btn .call-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .contact-us-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .info-item a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+
+  .contact-form, .contact-info {
+    width: 100%;
+    margin-bottom: 30px;
   }
-  
-  /* Floating Call Button */
+
   .floating-call-btn {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    background-color: #27ae60;
-    padding: 15px;
-    border-radius: 50%;
+    top: 10%;
   }
-  
-  .floating-call-btn .call-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  /* WhatsApp Button */
-  .whatsapp-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-button img {
-    width: 60px;
-    height: 60px;
-  }
-  
-  /* Media queries for responsive design */
-  @media (max-width: 768px) {
-    .contact-us-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .contact-form, .contact-info {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  
-    .floating-call-btn {
-      top: 10%;
-    }
-  }
-  
+}

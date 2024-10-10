@@ -39,6 +39,9 @@
       .form-heading{
         font-size: xx-large;
       }
+      .href-contactnumber{
+        color: black;
+      }
 
       /* Main section background */
       /* .main-section {
@@ -146,11 +149,7 @@
       }
 
       /* Call now button for floating action */
-      .call-now {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-      }
+      
 
       .call-now button {
         background-color: #27ae60;
