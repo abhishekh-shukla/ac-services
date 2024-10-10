@@ -9,6 +9,7 @@ import WebsiteDescription from './Component/Description/WebsiteDescription';
 import ServicesList from './Component/ServicesList/ServicesList';
 import ServicesListSplitAC from './Component/ServicesList/ServicesListSplitAC';
 import ServicesListLocation from './Component/ServicesList/ServicesListLocation';
+import ContactUs from './Component/Contact Us/ContactUs';
 
     function App() {
     
@@ -123,6 +124,9 @@ import ServicesListLocation from './Component/ServicesList/ServicesListLocation'
             <ServicesList/>
             <ServicesListSplitAC/>
             <ServicesListLocation/>
+          </div>
+          <div className="contactus-page">
+            <ContactUs/>
           </div>
           <footer>
             <div className="call-now">  
