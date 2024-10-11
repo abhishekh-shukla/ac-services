@@ -93,6 +93,7 @@
         max-width: 400px;
         width: 100%; /* Adjust to make it responsive */
         margin-right: 20px; /* Space between form and image */
+        font-family: "Roboto", Sans-serif;
       }
 
       .enquiry-form input,
@@ -104,7 +105,7 @@
         border: 1px solid #ccc;
         border-radius: 5px 5px 5px 5px;
         border-width: 2px 2px 2px 2px;
-
+        font-family: "Roboto", Sans-serif;
       }
 
       .enquiry-form textarea {
