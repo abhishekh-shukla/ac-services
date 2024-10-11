@@ -1,11 +1,12 @@
 /* Main container for the Contact Us section */
 .contact-us-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-start;
   background: linear-gradient(to bottom right, #2cd1ad, #ffffff);
   padding: 50px;
   position: relative;
+  font-family: "Roboto", Sans-serif;
 }
 
 /* Contact Form Styling */
@@ -27,6 +28,7 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
+  font-family: "Roboto", Sans-serif;
 }
 
 .contact-form textarea {
@@ -100,10 +102,10 @@
 /* Floating Call Button */
 .floating-call-btn {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
   transform: translateY(-50%);
-  background-color: #27ae60;
+  background-color: #06d05b;
   padding: 15px;
   border-radius: 50%;
   position: fixed;
@@ -112,6 +114,19 @@
 .floating-call-btn .call-icon {
   width: 30px;
   height: 30px;
+}
+
+.call-now{
+      top: 55%;
+    left: 65px;
+    transform: translateY(-100%);
+    background-color: fffff;
+    padding: 0px;
+    border-radius: 7%;
+    position: fixed;
+    font-family: "Roboto", Sans-serif;
+    padding: 4px;
+    font-size: small;
 }
 
 /* WhatsApp Button */

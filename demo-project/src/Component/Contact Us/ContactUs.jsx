@@ -13,9 +13,10 @@ const ContactUs = () => {
             src="https://cdn-icons-png.flaticon.com/512/597/597177.png"
             alt="Call Now"
             className="call-icon"
-          />
+            />
         </a>
       </div>
+           <a href="tel:+917666420421"> <p className='call-now'>Call Now</p></a>
 
       {/* Form Section */}
       <div className="contact-form">
