@@ -10,7 +10,7 @@ const WebsiteDescription = () => {
           alt="Service Representation" 
           className="company-image"/>
       </div>
-      <div className="service-description">
+      <div className="service-longdescription">
           <div className="description-content">
             <p>Welcome to Daikin AC Service Centre Mumbai, your one-stop destination for all your air conditioning needs. We specialize in providing top-notch services, including addressing water leakage issues, heating services, ductable AC maintenance, PCB repairs, and servicing for various types of window and split AC units.
 

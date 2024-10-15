@@ -17,7 +17,7 @@ import 'swiper/css/pagination';
   return (
     <div className="carousel-container">
       <Swiper
-        modules={[Pagination]}              // Add pagination
+        modules={[Pagination,Autoplay]}              // Add pagination
         pagination={{ clickable: true }}    // Enable clickable pagination dots
         loop={true}
         spaceBetween={30}

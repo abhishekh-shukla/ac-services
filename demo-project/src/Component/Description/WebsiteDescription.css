@@ -1,32 +1,81 @@
-    .description-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 50px;
-        background-color: #f9f9f9;
-    }
-    .company-image-container{
-        flex: 1;
-        display: flex;
-        justify-content: center;
-    }
-    .company-image {
-        /* width: 90%; */
-        max-width: 540px;
-        height: auto;
-    }
-    .description-content{
-        flex: 1;
-        text-align: start;
-        font-family: "Roboto", Sans-serif;
-        font-size: larger;
-        padding: 0% 0% 0% 10%;
-        justify-content: center;
+/* Base styles */
+.description-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
 
+.company-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.company-image {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+}
+
+.description-content {
+    flex: 1;
+    text-align: start;
+    font-family: "Roboto", Sans-serif;
+    font-size: larger;
+    padding: 0 0 0 10%;
+}
+.service-longdescription {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    display: contents;
+  }
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .description-section {
+        padding: 30px;
     }
-    .service-description {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f9f9f9;
+
+    .description-content {
+        padding: 0 5%;
+        font-size: medium;
     }
+}
+
+@media (max-width: 768px) {
+    .description-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .company-image-container {
+        margin-bottom: 20px;
+    }
+
+    .description-content {
+        padding: 0;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    .description-section {
+        padding: 15px;
+    }
+
+    .company-image {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .description-content {
+        font-size: small;
+    }
+}

@@ -128,11 +128,9 @@
 
       /* Image section */
       .image-section {
-        flex: 1;
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
-        padding: 0% 0% 0% 15%;
       }
 
       .repairman-image {
@@ -259,4 +257,7 @@
       }
       .services-list{
         background-color: #efefef;
+      }
+      .website-description {
+        display: grid;
       }
