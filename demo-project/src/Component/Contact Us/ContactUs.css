@@ -1,14 +1,13 @@
 /* Main container for the Contact Us section */
 .contact-us-container {
   display: flex;
-  flex-wrap: wrap; /* Adjust layout on smaller screens */
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   background: linear-gradient(to bottom right, #2cd1ad, #ffffff);
   padding: 40px;
   position: relative;
   font-family: "Roboto", Sans-serif;
-  gap: 30px;
+  gap: 7%;
 }
 
 /* Contact Form Styling */
@@ -69,7 +68,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 50px;
   color: #333;
 }
 
@@ -114,16 +113,16 @@
 /* Call Now Text */
 .call-now {
   position: fixed;
-  bottom: 130px; /* Adjust for consistent spacing */
-  left: 20px; /* Align with the button */
-  background-color: #06d05b; /* Match button color for consistency */
-  color: white; /* Ensure text is visible */
+  bottom: 87px;
+  left: 79px;
+  background-color: #131514;
+  color: white;
   border-radius: 10px;
-  padding: 8px 12px;
+  padding: 5px 10px;
   font-family: "Roboto", Sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
-  z-index: 10; /* Ensure it appears above other elements */
+  z-index: 1;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -145,13 +144,14 @@
   .contact-us-container {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2px;
   }
 
   .contact-form,
   .contact-info {
     width: 100%;
     margin-bottom: 20px;
+    gap:15px;
   }
 
   .floating-call-btn {
@@ -196,9 +196,9 @@
   }
 
   .call-now {
-    bottom: 110px; /* Closer alignment */
-    left: 10px;
-    font-size: 12px;
+    bottom: 68px;
+    left: 71px;
+    font-size: 9px;
   }
 
   .whatsapp-button img {

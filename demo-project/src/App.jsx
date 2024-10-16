@@ -40,7 +40,7 @@ function App() {
             alt="Daikin Logo"
             className="logo"
           />
-          <p className="contact">Call Us:<a href="tel:+919702776360" className="href-contactnumber">+91 9702776360</a></p>
+          <p className="contact">Call Us:<a href="tel:+917666420421" className="href-contactnumber">+91 7666420421</a></p>
         </header>
 
         <main className="main-section">
