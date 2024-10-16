@@ -1,22 +1,22 @@
 import React from 'react';
-import { useState } from 'react';
-import'./ContactUs.css'
+import './ContactUs.css';
 
 const ContactUs = () => {
-
-    return (
-      <div className="contact-us-container">
+  return (
+    <div className="contact-us-container">
       {/* Floating Call Button */}
       <div className="floating-call-btn">
-        <a href="tel:+917666420421">
+        <a href="tel:+919702776360">
           <img
             src="https://cdn-icons-png.flaticon.com/512/597/597177.png"
             alt="Call Now"
             className="call-icon"
-            />
+          />
         </a>
       </div>
-           <a href="tel:+917666420421"> <p className='call-now'>Call Now</p></a>
+      <a href="tel:+919702776360">
+        <p className="call-now">Call Now</p>
+      </a>
 
       {/* Form Section */}
       <div className="contact-form">
@@ -33,13 +33,12 @@ const ContactUs = () => {
 
       {/* Contact Info Section */}
       <div className="contact-info">
-
         <div className="info-item">
           <img
             src="https://cdn-icons-png.flaticon.com/512/597/597177.png"
             alt="Phone Icon"
           />
-          <a href="tel:+917666420421">+91 7666420421</a>
+          <a href="tel:+919702776360">+91 9702776360</a>
         </div>
         <div className="info-item">
           <img
@@ -59,7 +58,11 @@ const ContactUs = () => {
 
       {/* WhatsApp Button */}
       <div className="whatsapp-button">
-        <a href="https://wa.me/7666420421" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://wa.me/9702776360"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
             alt="WhatsApp"
@@ -67,7 +70,7 @@ const ContactUs = () => {
         </a>
       </div>
     </div>
-    );
-}
+  );
+};
 
 export default ContactUs;
