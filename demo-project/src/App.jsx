@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -10,6 +10,7 @@ import ServicesList from "./Component/ServicesList/ServicesList";
 import ServicesListSplitAC from "./Component/ServicesList/ServicesListSplitAC";
 import ServicesListLocation from "./Component/ServicesList/ServicesListLocation";
 import ContactUs from "./Component/Contact Us/ContactUs";
+import emailjs from '@emailjs/browser';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -20,15 +21,44 @@ function App() {
     message: "",
   });
 
+  const formRef = useRef();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form data submitted: ", formData);
-    // Here you can add logic to send the form data to a server
+
+    emailjs
+      .sendForm(
+        'service_0kn5c8o', // Replace with your EmailJS service ID
+        'template_k2t5mk5', // Replace with your EmailJS template ID
+        formRef.current,
+        '67x0jtUJGVYywii90' // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert('Message sent successfully!');
+          e.target.reset(); // Reset the form fields
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            address: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send the message. Please try again later.');
+        }
+      );
   };
 
   return (
@@ -40,17 +70,16 @@ function App() {
             alt="Daikin Logo"
             className="logo"
           />
-          <p className="contact">Call Us:<a href="tel:+917666420421" className="href-contactnumber">+91 7666420421</a></p>
+          <p className="contact">Call Us: <a href="tel:+917666420421" className="href-contactnumber">+91 7666420421</a></p>
         </header>
 
         <main className="main-section">
           <div className="heading">
-            {" "}
             <h1>DAIKIN AUTHORISED SERVICE CENTRE</h1>
             <h2>24 x 7 Service Available</h2>
           </div>
           <div className="secondary-container">
-            <form className="enquiry-form" onSubmit={handleSubmit}>
+            <form className="enquiry-form" onSubmit={handleSubmit} ref={formRef}>
               <h2 className="form-heading">ENQUIRY TO REPAIR</h2>
               <input
                 type="text"
@@ -58,6 +87,7 @@ function App() {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
+                required
               />
               <input
                 type="email"
@@ -65,6 +95,7 @@ function App() {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
+                required
               />
               <input
                 type="tel"
@@ -85,6 +116,7 @@ function App() {
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
+                required
               />
               <button type="submit">Submit</button>
             </form>

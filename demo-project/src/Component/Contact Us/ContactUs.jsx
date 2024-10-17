@@ -2,6 +2,8 @@ import React from 'react';
 import './ContactUs.css';
 
 const ContactUs = () => {
+
+
   return (
     <div className="contact-us-container">
       {/* Floating Call Button */}
@@ -21,11 +23,11 @@ const ContactUs = () => {
       {/* Form Section */}
       <div className="contact-form">
         <h2>Contact Us</h2>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Phone Number" />
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Address" />
-        <textarea placeholder="Message"></textarea>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="phone"placeholder="Phone Number" />
+        <input type="email"name="email" placeholder="Email" />
+        <input type="text"name="address" placeholder="Address" />
+        <textarea placeholder="Message" name='message'></textarea>
         <button type="submit">
           Submit <span>&#10132;</span>
         </button>
