@@ -36,10 +36,10 @@ function App() {
 
     emailjs
       .sendForm(
-        'service_0kn5c8o', // Replace with your EmailJS service ID
-        'template_k2t5mk5', // Replace with your EmailJS template ID
+        'service_ibwkmbr', // Replace with your EmailJS service ID
+        'template_kp756a9', // Replace with your EmailJS template ID
         formRef.current,
-        '67x0jtUJGVYywii90' // Replace with your EmailJS public key
+        'UuloJy_3rhgaqz6Lv' // Replace with your EmailJS public key
       )
       .then(
         () => {

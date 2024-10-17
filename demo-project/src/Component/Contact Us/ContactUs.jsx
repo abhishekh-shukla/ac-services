@@ -1,8 +1,53 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './ContactUs.css';
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
+  const formRef = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    message: ''
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+       'service_ibwkmbr', // Replace with your EmailJS service ID
+        'template_kp756a9', // Replace with your EmailJS template ID
+        formRef.current,
+        'UuloJy_3rhgaqz6Lv' // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          e.target.reset(); // Clear the form fields
+          setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            address: '',
+            message: ''
+          });
+        },
+        (error) => {
+          console.error('Failed to send the message...', error.text);
+          alert('Failed to send the message. Please try again later.');
+        }
+      );
+  };
 
   return (
     <div className="contact-us-container">
@@ -21,17 +66,50 @@ const ContactUs = () => {
       </a>
 
       {/* Form Section */}
-      <div className="contact-form">
+      <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
         <h2>Contact Us</h2>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="phone"placeholder="Phone Number" />
-        <input type="email"name="email" placeholder="Email" />
-        <input type="text"name="address" placeholder="Address" />
-        <textarea placeholder="Message" name='message'></textarea>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="address"
+          placeholder="Address"
+          value={formData.address}
+          onChange={handleChange}
+        />
+        <textarea
+          placeholder="Message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
         <button type="submit">
           Submit <span>&#10132;</span>
         </button>
-      </div>
+      </form>
 
       {/* Contact Info Section */}
       <div className="contact-info">
